@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+</head>
+<link rel="stylesheet" href="css&js/style.css">
+<body>
+    <script src="css&js/script.js"></script>
+    
+    <div class="tela">
+
+        <header class="cabecalho"> 
+            <div class="menuLateral">
+                <img src="img/menu lateral.png" onclick="abrirMenu()">
+
+                <div class="infoMenu">
+                    <div class="telaMenu">
+                        <header class="imgMenuLateral">
+                            <img src="img/menu lateral.png" onclick="fecharMenu()"> 
+                            <label>Menu</label>
+                        </header>
+
+                            <div class="opcaoMenu" onclick="toggleConfiguracao()">
+                                <img src="img/engrenagem.png">
+                                <label>Configuração</label>
+                            </div>
+
+                            <div class="subMenuConfiguracao">
+
+                                <div class="opcaoSubMenu" onclick="toggleLayout()">
+                                    <img src="img/layout.png">
+                                    <label>Layout</label>
+                                </div>
+                                
+                                <!-- Submenu do Layout -->
+                                <div class="subMenuLayout">
+                                    <div class="opcaoSubMenu" onclick="alterarTema()">
+                                        <img src="img/mudar tema.png">
+                                        <label>Tema</label>
+                                    </div>
+                                    <div class="opcaoSubMenu" onclick="alterarFonte()">
+                                        <img src="img/fonte.png">
+                                        <label>Fonte</label>
+                                    </div>
+                                </div>
+                                
+
+                                <div class="opcaoSubMenu" onclick="toggleConta()">
+                                    <img src="img/conta.png">
+                                    <label>Conta</label>
+                                </div>
+
+                                <!-- Submenu da Conta -->
+                                <div class="subMenuConta">
+                                    <div class="opcaoSubMenu">
+                                        <button class="btSubConta">Desativar Conta</button>
+                                    </div>
+                                    <div class="opcaoSubMenu">
+                                        <button class="btSubConta">Excluir Conta</button>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="opcaoMenu">
+                                <img src="img/dados-pessoais.png" onclick="toggleDados()">
+                                <label>Meus Dados</label>
+                            </div>
+
+                            <div class="subMenuDados">
+
+                                <div class="opcaoSubMenu">
+                                    <img src="img/editar.png"onclick="exibirFormularioAlterarDados()">
+                                    <label>Alterar Dados</label>
+                                </div>
+
+                            </div>
+
+
+                            <div class="opcaoMenu">
+                                <img src="img/historia.png" onclick="toggleHistorico()">
+                                <label>Histórico</label>
+                            </div>
+
+                            <div class="subMenuHistorico">
+
+                                <div class="opcaoSubMenu" onclick="toggleVisuHist()">
+                                    <img src="img/visualizar.png">
+                                    <label>Visualizar</label>
+                                </div>
+
+                                <div class="opcaoSubMenu" onclick="toggleExclHist()">
+                                    <img src="img/excluir.png">
+                                    <label>Excluir</label>
+                                </div>
+
+                                 <!-- periodo excluir -->
+                                 <div class="subMenuExclHist">
+                                    <div class="opcaoSubMenu">
+                                        <select>
+                                            <option disabled selected>Período</option>
+
+                                            <option value="ultimaHr">Última Hora</option>
+                                            <option value="ultima24Hr">Última 24 Horas</option>
+                                            <option value="ultimo7Dia">Últimos 7 Dias</option>
+                                            <option value="ultima4Sem">Últimas 4 Semanas</option>
+                                            <option value="tdPeriodo">Todo o Período</option>
+                                        
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="opcaoSubMenu">
+                                        <button type="button" class="ExcluirHistoPeriod">Excluir</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+
+                            <div  class="sairMenu"> 
+                                <a href="index.html"><img src="img/acesso-backdoor.png">
+                                <label>Sair</label></a>
+                            </div>
+                        <footer></footer>
+                    </div>
+                </div>
+
+            </div>
+            <h1>TDO</h1>
+        </header>
+
+            <h2>Tudo Em Ordem</h2>
+
+        <section class="conteudo">  
+           
+            <div class="btOpcoes">
+                <button onclick="" class="btMeuCrono">Meu Cronograma</button>
+
+                <button onclick="" class="btCronoIntelig">Cronograma Inteligente</button>
+            </div>  
+
+            <section class="conteudo formAlterarDados">
+
+                <h3>Alterar Dados</h3>
+
+                <form>
+
+                    <div class="campoForm">
+                        <label>Insira o novo E-mail:</label>
+                        <input type="email" id="novoEmail" placeholder="email@email.com" required>
+                    </div>
+            
+                    <div class="campoForm">
+                        <label>Confirme o novo E-mail:</label>
+                        <input type="email" id="confirmaNovoEmail" placeholder="email@email.com" required>
+                    </div>
+                    
+                    <div class="campoForm">
+                        <label>Insira a nova Senha:</label>
+                        <input type="password" id="novaSenha" placeholder="********" required>
+                    </div>
+
+                    <div class="campoForm">
+                        <label>Confirme a nova Senha:</label>
+                        <input type="password" id="confirmaNovaSenha" placeholder="********" required>
+                    </div>
+
+                    <div class="btAlterarDados">
+
+                        <button class="cancelarAltDados" onclick="fecharFormulario()">Cancelar</button>
+                        
+                        <button type="submit" class="alterarDados">Alterar</button>
+                        
+                    </div>
+                </form>
+            </section>
+
+            <section class="conteudo visualizarHist"> 
+
+                <h3>Visualizar Histórico</h3>
+                
+                <div class="historico">
+                    <p class="diaUsoHist">
+                        Data de Uso: 16 de março de 2023
+                    </p>
+
+                    <p>10:00 AM - 11:30 AM: Joana acessou o aplicativo para criar um novo cronograma. Ela adicionou avisos e definiu datas de lembretes.</p>
+
+                    <p>3:30 PM: Joana recebeu uma notificação do aplicativo lembrando-a de uma tarefa importante que estava próxima do prazo. Ela marcou a tarefa como concluída.</p>
+
+                    <br>
+                    
+                    <p class="diaUsoHist">
+                        Data de Uso: 16 de março de 2023
+                    </p>
+
+                    <p>9:00 AM: Joana usou o aplicativo para visualizar seu cronograma de rotina.</p>
+                    
+                    <br>
+
+                    <p class="diaUsoHist">
+                        Data de Uso: 16 de março de 2023
+                    </p>
+
+                    <p>10:00 AM - 11:30 AM: Joana acessou o aplicativo para criar um novo cronograma. Ela adicionou avisos e definiu datas de lembretes.</p>
+
+                    <p>3:30 PM: Joana recebeu uma notificação do aplicativo lembrando-a de uma tarefa importante que estava próxima do prazo. Ela marcou a tarefa como concluída.</p>
+
+                    <br>
+                    <p class="diaUsoHist">
+                        Data de Uso: 16 de março de 2023
+                    </p>
+
+                    <p>9:00 AM: Joana usou o aplicativo para visualizar seu cronograma de rotina.</p>
+                </div>
+
+                <div class="btVisuHist">
+                    <button type="button" onclick="fecharHistorico()">Voltar</button>
+                </div>
+
+            </section>
+
+        </section>
+
+        <footer class="rodape"></footer>
+    </div>
+</body>
+</html>

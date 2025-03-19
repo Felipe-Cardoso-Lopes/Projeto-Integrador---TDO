@@ -1,0 +1,987 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(187, 225, 209); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+/* Estilo para temas */
+
+body.tema-escuro {
+    background-color: rgb(73, 119, 119); 
+}
+
+.tema-escuro header
+{
+    background-color: rgb(187, 225, 209); 
+}
+
+.tema-escuro footer
+{
+    background-color: rgb(187, 225, 209); 
+}
+
+.tema-escuro header h1 {
+    color: rgb(73, 119, 119); 
+}
+
+.tema-escuro h2
+{
+    color: rgb(187, 225, 209, 0.5);  
+}
+
+.tema-escuro h3
+{
+    color: rgb(187, 225, 209, 0.5);  
+}
+
+.tema-escuro select
+{
+    background-color: rgb(187, 225, 209); 
+    color: rgb(73, 119, 119); 
+}
+
+.tema-escuro button
+{
+    background-color: rgb(187, 225, 209); 
+    color: rgb(73, 119, 119); 
+}
+
+.tema-escuro button:hover{
+    background-color: rgb(170, 215, 200); 
+}
+
+.tema-escuro label {
+    color: rgb(187, 225, 209); 
+}
+
+.tema-escuro input {
+    background-color: rgba(145, 175, 165, 0.5);
+    border: 1px solid rgb(187, 225, 209); 
+}
+
+.tema-escuro .infoMenu {
+    background-color: rgb(73, 119, 119); 
+}
+
+.tema-escuro .infoMenu header label
+{
+    color:  rgb(73, 119, 119); 
+}
+
+.tema-escuro .historico {
+    background-color: rgba(170, 215, 200, 0.2);;
+    border: 1px solid rgb(187, 225, 209); 
+}
+
+.tema-escuro .historico p {
+    color: rgb(187, 225, 209); 
+}
+
+.tema-escuro .historico::-webkit-scrollbar-thumb {
+    background-color: rgb(187, 225, 209); 
+}
+
+.tema-escuro .caixaFeedback textarea {
+    background-color: rgba(170, 215, 200, 0.2);;
+    border: 1px solid rgb(187, 225, 209); 
+}
+
+.tema-escuro .caixaFeedback textarea::placeholder
+{
+    color: rgb(187, 225, 209); 
+}
+/*-------------------------*/
+
+.tela, .telaMenu {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: auto; 
+    width: 100%;
+    }
+
+header, footer {
+    display: flex;
+    background-color: rgb(73, 119, 119); 
+    padding: 2rem;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+footer {
+    margin-top: auto; 
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: rgb(187, 225, 209);
+    text-align: center;
+    flex-grow: 1;
+}
+
+.menuLateral
+{
+    position: absolute; 
+    left: 1rem; 
+    
+}
+
+.menuLateral img
+{
+    width: 3rem;
+    cursor: pointer;
+}
+
+h2, h3
+{
+    color: rgb(73, 119, 119, 0.5);  
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.conteudo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    text-align: center;
+}
+
+.btConcluirCad, .btConcluirLogin
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+
+button
+{
+    background-color: rgb(73, 119, 119); 
+    color: rgb(187, 225, 209);
+    border: none;
+    padding: 0.8rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); 
+    border-radius: 5px; 
+    cursor: pointer;
+    margin-bottom: 2.5rem;
+    font-size: 1.2rem;
+}
+
+button:hover {
+    background-color: rgb(58, 96, 96); 
+}
+
+.btOpcoes
+{
+    display: flex;;
+    flex-direction: column;
+}
+
+.btVoltar
+{
+    padding-top: 5rem;
+    
+}
+
+.btVoltar button
+{
+    width: 10rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; 
+    margin-bottom: 4rem;
+}
+
+label {
+    font-size: 1rem;
+    color: rgb(73, 119, 119);
+    
+}
+
+input {
+    width: 10rem;
+    padding: 0.5rem;
+    text-align: center;
+    background-color: rgba(130, 172, 164, 0.5);
+    border: 1px solid rgb(73, 119, 119);
+    margin-bottom: 1rem;
+}
+
+/*-------------Tela--Inicial-------------*/
+.entrar {
+    margin-bottom: 1rem;
+    width: 30% ;
+}
+
+.cadUsuario
+{
+    text-align: left;
+    width: 30%;
+    font-size: 0.8rem;
+}
+
+.cadUsuario p {
+    color: rgba(255, 255, 255); 
+}
+
+.cadUsuario a {
+    color: orange; 
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cadUsuario a:hover {
+    color: darkorange; 
+    text-decoration: underline;
+}
+
+/*------------------------------------*/
+
+/*--------------Cadastro--------------*/
+
+.campoForm
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.concluirCad
+{
+    width: 10rem;
+}
+
+.calcelCad
+{
+    width: 15rem;
+}
+/*------------------------------------*/
+
+/*--------------Login--------------*/
+
+.recupSenha
+{
+    text-align: right;
+    width: 20em;
+    font-size: 0.8rem;
+    margin-top: -10%;
+}
+
+.recupSenha a {
+    color: orange; 
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.recupSenha a:hover {
+    color: darkorange; 
+    text-decoration: underline;
+}
+
+.entrarLogin
+{
+    width: 8rem;
+}
+
+.calcelLogin
+{
+    width: 12rem;
+}
+
+/*------------------------------------*/
+
+/*----------Recuperar-Senha-----------*/
+.avisoRecuperarSenha
+{
+    width: 25rem;
+}
+
+.formRecupSenha input
+{
+    margin-top: 5%;
+    width: 15rem;
+}
+
+.btnRecuperarSenha button
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10rem
+}
+
+.btnRecuperarSenha 
+{
+    display: flex;
+    justify-content: center;
+    padding-top: 5rem;
+}
+
+.btVoltarNovaSenha button
+{
+    width: 15rem;
+}
+
+/*------------------------------------*/
+
+/*-----------Menu-Lateral-------------*/
+
+.infoMenu {
+    position: fixed;
+    top: 0;
+    left: -250px; 
+    width: 250px;
+    height: 100%;
+    background-color: rgb(187, 225, 209); 
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: left 0.3s ease-in-out;
+}
+
+.infoMenu img
+{
+    width: 20%;
+}
+
+.infoMenu header
+{
+    justify-content: unset;
+}
+
+.infoMenu header label
+{
+    color:  rgb(187, 225, 209);
+    font-size: 2rem;
+}
+
+.opcaoMenu, .sairMenu, .opcaoSubMenu {
+    display: flex;
+    align-items: center;
+    padding: 1rem ;
+}
+
+.menuLateral label {
+    font-size: 1.3rem;
+    margin-left: 5%;
+    text-align: center;
+}
+
+.sairMenu
+{
+    margin-top: 32rem;
+}
+
+.sairMenu a 
+{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.subMenuConfiguracao, .subMenuDados, .subMenuHistorico
+{
+    display: none;
+}
+
+.opcaoSubMenu
+{
+    margin-left: 10%;
+}
+
+
+
+/* Estilo para submenus adicionais */
+.subMenuLayout{
+    margin-left: 2rem;
+    display: none;
+}
+
+.subMenuLayout .opcaoSubMenu {
+    padding: 0.5rem;
+}
+
+/*----------Conta-Lateral--------*/
+
+.subMenuConta 
+{
+ display: none;
+}
+
+.btSubConta {
+    border-radius: 10px; 
+    width: 100%; 
+    text-align: left; 
+    font-size: 1rem;
+    margin: 0rem auto; 
+}
+
+/*------------------------------------*/
+
+/*-----------Alterar-Dados------------*/
+
+.formAlterarDados
+{
+    display: none;
+}
+
+.formAlterarDados h3
+{
+    margin-bottom: 2rem;
+}
+
+.btAlterarDados
+{
+  display: flex;
+  justify-content: space-between;
+}
+
+.btAlterarDados button
+{
+    width: 35%; 
+}
+
+/*------------------------------------*/
+
+/*---------Excluir-Historico----------*/
+
+.subMenuExclHist
+{
+    display: none;
+}
+
+select
+{
+    background-color: rgb(73, 119, 119); 
+    color: rgb(187, 225, 209);
+    border: none;
+    padding: 0.8rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); 
+    border-radius: 10px; 
+    cursor: pointer;
+    margin-bottom: 2.5rem;
+    font-size: 1rem;
+}
+
+.ExcluirHistoPeriod 
+{
+    width: 75%; 
+    border-radius: 10px;
+    margin-top: -20%;
+    margin-left: 10%;
+    padding: 0.5rem;
+}
+
+
+/*------------------------------------*/
+
+/*-------Visualizar-Historico---------*/
+
+.conteudo .visualizarHist
+{
+    display: none;
+}
+
+.visualizarHist {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 450px;
+}
+
+.historico {
+    max-height: 350px;
+    overflow-y: auto;
+    padding: 1rem;
+    background-color: rgba(145, 175, 165, 0.2);
+    border: 1px solid rgb(73, 119, 119);
+    border-radius: 10px;
+}
+
+.historico p {
+    font-size: 0.9rem;
+    color: rgb(73, 119, 119);
+    text-align: justify;
+    margin-bottom: 0.5rem;
+}
+
+.diaUsoHist
+{
+    font-weight: bold;
+}
+
+.btVisuHist button
+{
+    width: 10rem; 
+    border-radius: 5px;
+}
+
+.historico::-webkit-scrollbar {
+    width: 0.5rem; 
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
+
+.historico::-webkit-scrollbar-thumb {
+    background-color: rgb(73, 119, 119); 
+    border-radius: 10px;
+}
+
+
+
+
+/*------------------------------------*/
+
+/*-----------Meu-Cronograma-----------*/
+
+.btVoltarInicio
+{
+    width: 10rem;
+}
+
+
+/*------------------------------------*/
+
+/*--------------FeedBack--------------*/
+
+
+.caixaFeedback textarea {
+    background-color: rgba(145, 175, 165, 0.2);
+    border: 1px solid rgb(73, 119, 119);
+    border-radius: 15px;
+    width: 15rem;
+    height: 10rem;
+    padding: 15px;
+    font-size: 0.8rem;
+}
+
+.caixaFeedback textarea::placeholder
+{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: rgb(73, 119, 119);
+    text-align: justify;  
+}
+
+.caixaFeedback textarea::-webkit-scrollbar {
+    width: 0.5rem; 
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+
+}
+
+.caixaFeedback textarea::-webkit-scrollbar-thumb {
+    background-color: rgb(73, 119, 119); 
+    border-radius: 10px;
+}
+
+.btOpcoesFeedback
+{
+    display: flex;
+    flex-direction: column;
+    width: 11rem;
+    height: 2rem;
+    margin-top: 10rem;
+}
+
+
+.notificacaoFeedBack {
+    display: none;
+    position: fixed;
+    align-items: center;
+    background-color: rgb(73, 119, 119);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 300px;
+}
+
+.agradecimentoFeedback
+{
+    text-align: justify;
+    padding: 30px;
+    font-size: 1.1rem;
+}
+
+.btVoltarNotifyFeedback
+{
+    padding-top: 1rem;
+    
+}
+
+.btVoltarNotifyFeedback button
+{
+    width: 10rem;
+    background-color: rgb(187, 225, 209);
+    color: rgb(73, 119, 119);;
+}
+
+
+/*------------------------------------*/
+
+/*------------Diminuir-Opacidade-do-Fundo------------*/
+.conteudo.dimmed > *:not(.notificacaoFeedBack):not(.confirmExclCrono) 
+{
+    opacity: 0.5; 
+    pointer-events: none; 
+}
+
+/*---------Confirm-Exclusao-----------*/
+.confirmExclCrono
+{
+    display: none;
+    position: fixed;
+    align-items: center;
+    background-color: rgb(73, 119, 119);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 300px;
+    top: 35%;
+}
+
+.confirmacaoExclusao
+{
+    text-align: center;
+    padding: 30px;
+    font-size: 1.5rem;
+}
+
+.btExcluirCrono
+{
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.btExcluirCrono button
+{
+    width: 45%; 
+    background-color: rgb(187, 225, 209);
+    color: rgb(73, 119, 119);;
+}
+
+
+/*------------------------------------*/
+
+/*------Visualizar-Meu-Cronograma-----*/
+.visuDiasMeuCrono {
+    text-align: center;
+    background-color: rgb(73, 119, 119);
+    border-radius: 10px;
+    padding: 10px;
+    width: 300px;
+    margin-bottom: 2.5rem;
+}
+
+.visuDiasMeuCrono:hover
+{
+    background-color: rgb(58, 96, 96);
+}
+
+.visuDiasMeuCrono label
+{
+   color: rgb(187, 225, 209); 
+   font-size: 1.4rem
+}
+
+.diasVisuCrono {
+    display: flex;
+    justify-content: space-around;
+}
+
+.dia {
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    padding: 5px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.dia:hover
+{
+    background-color: rgb(187, 225, 209); 
+}
+
+.visualizarMeuCrono {
+    display: none;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 400px;
+    padding: 25px;
+    background: rgba(0, 0, 0, 0.5); 
+    border-radius: 20px;
+}
+
+.cronograma {
+    background: #8cbfa7;
+    padding: 20px;
+    border-radius: 10px;
+    max-height: 350px;
+    overflow-y: auto;
+    text-align: left;
+    color: white;
+}
+
+.cronograma p {
+    font-size: 0.9rem;
+    color: rgb(73, 119, 119);
+    text-align: justify;
+}
+
+.cronograma h3
+{
+    margin-top: 0rem;    
+    color: rgb(73, 119, 119);
+}
+
+.cronograma hr
+{
+    background-color: rgb(73, 119, 119);
+    border: 0;
+	height: 1px; 
+}
+
+.cronograma::-webkit-scrollbar {
+    width: 0.5rem; 
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+
+}
+
+.cronograma::-webkit-scrollbar-thumb {
+    background-color: rgb(73, 119, 119); 
+    border-radius: 10px;
+}
+
+/*-----------------------------*/
+
+/*----Add-Avisos-Calendario----*/
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color:  rgb(187, 225, 209); 
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    text-align: center;
+}
+
+.close {
+    float: right;
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: rgb(73, 119, 119); 
+}
+
+.calendario {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    margin-top: 2rem;
+}
+
+.modal-content label
+{
+   color: rgb(73, 119, 119); 
+   font-size: 1.5rem;
+   margin-left: 15px;
+}
+
+.calendario button {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    background: #8cbfa7; 
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calendario button:hover {
+    background: rgb(187, 225, 209); 
+}
+
+.calendario button.comAviso {
+    background: rgb(73, 119, 119); 
+}
+
+.calendario button.comAviso:hover {
+    background-color: rgb(58, 96, 96);
+}
+
+/*-----------------------------*/
+
+/*----------------Questionario--------------------*/
+
+.caixaPergunta
+{ 
+    text-align: center;
+    width: 250px;
+    background-color:rgb(73, 119, 119);
+    border-radius: 25px;
+    padding: 5px;
+    
+}
+
+.pergunta
+{ 
+    color: rgb(187, 225, 209);
+    padding: 1.5rem;
+    font-size: 1.3rem;
+    width: 15rem;
+}
+
+.caixaPergunta input[type = "number"]
+{ 
+    border-radius: 15px;
+    width: 5rem;
+    height: 40px;
+    background-color: rgb(187, 225, 209);
+    color: rgb(73, 119, 119);
+    font-size: 1.3rem;
+}
+
+.caixaPergunta select
+{
+    background-color: rgb(187, 225, 209);
+    color: rgb(73, 119, 119);  
+    font-size: 0.8rem;
+    max-width: 200px;
+    height: 3rem;
+}
+
+.btOpcoesQuestionario
+{
+    margin-top: 10rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.caixaPergunta button
+{
+    background-color: rgb(187, 225, 209);
+    color: rgb(73, 119, 119);
+    width: 10rem;
+    height: 2.5rem;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.caixaPergunta button:hover
+{
+    background-color: #8cbfa7; 
+}
+
+.caixaPergunta textarea {
+    background-color: rgb(187, 225, 209);
+    border-color: rgb(73, 119, 119);
+    border-radius: 10px;
+    width: 13rem;
+    height: 3rem;
+    padding: 5px;
+    font-size: 0.8rem;
+}
+
+.caixaPergunta textarea::placeholder
+{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: rgb(73, 119, 119);
+    text-align: justify;  
+}
+
+.caixaPergunta textarea::-webkit-scrollbar {
+    width: 0.5rem; 
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+
+}
+
+.caixaPergunta textarea::-webkit-scrollbar-thumb {
+    background-color: rgb(73, 119, 119); 
+    border-radius: 10px;
+}
+
+.respostaQuestionario1-1, .respostaQuestionario1-2-2, .respostaQuestionario2-1
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.respostaQuestionario1-2, .respostaQuestionario2, .respostaQuestionario4
+{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/*----------------*/
+
+/*!!!!!BAGUNÇA!!!!!*/
+.visuOpcaoMeuCrono {
+    text-align: center;
+    background-color: rgb(73, 119, 119);
+    border-radius: 10px;
+    padding: 10px;
+    width: 300px;
+    margin-bottom:12rem;
+}
+
+.visuOpcaoMeuCrono:hover
+{
+    background-color: rgb(58, 96, 96);
+}
+
+.visuOpcaoMeuCrono label
+{
+   color: rgb(187, 225, 209); 
+   font-size: 1.4rem
+}
+
+.btDefinirCrono
+{
+    margin-bottom: -5rem;
+}
+
