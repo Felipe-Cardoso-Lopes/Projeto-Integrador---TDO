@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<link rel="stylesheet" href="css&js/style.css">
+<body>
+    <script src="css&js/script.js"></script>
+    
+    <div class="tela">
+        <header class="cabecalho"> 
+            <h1>TDO</h1>
+        </header>
+
+         <h2>Login</h2>
+
+        <section class="conteudo">
+
+            <form id="formLogin">
+
+                <div class="campoForm">
+                <label>E-mail:</label>
+                <input type="email" name="email" id="emailUser" placeholder="email@email.com" required>
+                </div>
+
+                <div class="campoForm">
+                <label>Senha:</label>
+                <input type="password" name="senha" id="senhaUser" minength="8" placeholder="********" required>
+                </div>
+
+                <div class="recupSenha">
+                    <a href="recuperarSenha.html">Esqueceu a Senha?</a>
+                </div>
+
+                <div class="btConcluirLogin">
+                <button type="submit"  onclick="" class="entrarLogin">Entrar</button>
+
+                <button type="button" onclick="" class="calcelLogin">Cancelar</button>
+                </div>
+
+            </form>            
+        </section>
+
+        <footer class="rodape"></footer>
+    </div>
+    <script>
+        document.getElementById('formLogin').addEventListener('submit', async (e) =>
+    {
+        e.preventDefault();
+        const email = document.getElementById('emailUser').value;
+        const senha = document.getElementById('senhaUser').value;
+
+        const res = await fetch('http://localhost:3000/login', 
+            {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json'},
+                body: JSON.stringify({email, senha})
+            }
+        );
+
+        const data = await res.json();
+        if (res.ok) 
+        {
+            window.location.href = 'telaPrincipal.html';
+        }
+        else
+        {
+            alert('Email ou senha Incorreto!');
+        }
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+</head>
+<link rel="stylesheet" href="css&js/style.css">
+
+<body>
+    <script src="css&js/script.js"></script>
+    
+    <div class="tela">
+        <header class="cabecalho"> 
+          <h1>TDO</h1>
+        </header>
+
+        <h2>Cadastro</h2>
+
+        <section class="conteudo">
+          
+
+            <form id="formCadastro">
+
+                <div class="campoForm">
+                <label>Nome:</label>
+                <input type="text" name="nomeUser" id="nameUser" placeholder="Insira seu Nome" required>
+                </div>
+
+                <div class="campoForm">
+                <label>E-mail:</label>
+                <input type="email" name="email" id="emailUser" placeholder="email@email.com" required>
+                </div>
+
+                <div class="campoForm">
+                <label>CPF:</label>
+                <input type="text" name="cpf" id="CPFuser" placeholder="999.999.999-99" required>
+                </div>
+
+                <div class="campoForm">
+                <label>Nascimento:</label>
+                <input type="date" name="nascimento" id="nascUser" required>
+                </div>
+
+                <div class="campoForm">
+                <label>Senha:</label>
+                <input type="password" name="senha" id="senhaUser" minength="8" placeholder="********" required>
+                </div>
+
+                <div class="campoForm">
+                <label>Confirme a Senha:</label>
+                <input type="password" name="confirmSenha" id="confirmSenhaUser" minength="8" placeholder="********" required>
+                </div>
+
+                <div class="btConcluirCad">
+                    <button type="submit"  class="concluirCad">Cadastrar</button>
+
+                    <button type="button"  onclick="" class="calcelCad">Cancelar</button>
+                </div>
+
+            </form>
+
+          
+        </section>
+
+        <footer class="rodape"></footer>
+    </div>
+    <script>
+        document.getElementById('formCadastro').addEventListener('submit', async (e) => 
+            {
+                e.preventDefault();
+                const nome = document.getElementById('nameUser').value;
+                const email = document.getElementById('emailUser').value;
+                const cpf = document.getElementById('CPFuser').value;
+                const dtNascimento = document.getElementById('nascUser').value;
+                const senha = document.getElementById('senhaUser').value;
+                const confirmSenha = document.getElementById('confirmSenhaUser').value;
+
+                if (confirmSenha != senha)
+                {
+                    alert('As senhas são diferentes');
+                    return;
+                }
+
+
+                const res = await fetch('http://localhost:3000/register', 
+                    {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json'},
+                        body: JSON.stringify({ nome, email, cpf, dtNascimento, senha}),
+                    }
+                );
+
+                if (res.ok)
+                {
+                    alert('Cadastro realizado!');
+                    window.location.href = 'index.html';
+                }
+                else
+                {
+                    alert('Erro ao cadastrar!');
+                }
+            });
+    </script>
+</body>
+</html>

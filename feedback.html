@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="css&js/style.css"> 
+</head>
+<body>
+    <script src="css&js/script.js"></script>
+
+    <div class="tela">
+
+        <header class="cabecalho"> 
+            <div class="menuLateral">
+                <img src="img/menu lateral.png" onclick="abrirMenu()">
+
+                <div class="infoMenu">
+                    <div class="telaMenu">
+                        <header class="imgMenuLateral">
+                            <img src="img/menu lateral.png" onclick="fecharMenu()"> 
+                            <label>Menu</label>
+                        </header>
+
+                            <div class="opcaoMenu" onclick="toggleConfiguracao()">
+                                <img src="img/engrenagem.png">
+                                <label>Configuração</label>
+                            </div>
+
+                            <div class="subMenuConfiguracao">
+
+                                <div class="opcaoSubMenu" onclick="toggleLayout()">
+                                    <img src="img/layout.png">
+                                    <label>Layout</label>
+                                </div>
+                                
+                                <!-- Submenu do Layout -->
+                                <div class="subMenuLayout">
+                                    <div class="opcaoSubMenu" onclick="alterarTema()">
+                                        <img src="img/mudar tema.png">
+                                        <label>Tema</label>
+                                    </div>
+                                    <div class="opcaoSubMenu" onclick="alterarFonte()">
+                                        <img src="img/fonte.png">
+                                        <label>Fonte</label>
+                                    </div>
+                                </div>
+                                
+
+                                <div class="opcaoSubMenu" onclick="toggleConta()">
+                                    <img src="img/conta.png">
+                                    <label>Conta</label>
+                                </div>
+
+                                <!-- Submenu da Conta -->
+                                <div class="subMenuConta">
+                                    <div class="opcaoSubMenu">
+                                        <button class="btSubConta">Desativar Conta</button>
+                                    </div>
+                                    <div class="opcaoSubMenu">
+                                        <button class="btSubConta">Excluir Conta</button>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="opcaoMenu">
+                                <img src="img/dados-pessoais.png" onclick="toggleDados()">
+                                <label>Meus Dados</label>
+                            </div>
+
+                            <div class="subMenuDados">
+
+                                <div class="opcaoSubMenu">
+                                    <img src="img/editar.png"onclick="exibirFormularioAlterarDados()">
+                                    <label>Alterar Dados</label>
+                                </div>
+
+                            </div>
+
+
+                            <div class="opcaoMenu">
+                                <img src="img/historia.png" onclick="toggleHistorico()">
+                                <label>Histórico</label>
+                            </div>
+
+                            <div class="subMenuHistorico">
+
+                                <div class="opcaoSubMenu" onclick="toggleVisuHist()">
+                                    <img src="img/visualizar.png">
+                                    <label>Visualizar</label>
+                                </div>
+
+                                <div class="opcaoSubMenu" onclick="toggleExclHist()">
+                                    <img src="img/excluir.png">
+                                    <label>Excluir</label>
+                                </div>
+
+                                 <!-- periodo excluir -->
+                                 <div class="subMenuExclHist">
+                                    <div class="opcaoSubMenu">
+                                        <select>
+                                            <option disabled selected>Período</option>
+
+                                            <option value="ultimaHr">Última Hora</option>
+                                            <option value="ultima24Hr">Última 24 Horas</option>
+                                            <option value="ultimo7Dia">Últimos 7 Dias</option>
+                                            <option value="ultima4Sem">Últimas 4 Semanas</option>
+                                            <option value="tdPeriodo">Todo o Período</option>
+                                        
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="opcaoSubMenu">
+                                        <button type="button" class="ExcluirHistoPeriod">Excluir</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+
+                            <div  class="sairMenu"> 
+                                <a href="index.html"><img src="img/acesso-backdoor.png">
+                                <label>Sair</label></a>
+                            </div>
+                        <footer></footer>
+                    </div>
+                </div>
+
+            </div>
+            <h1>TDO</h1>
+        </header>
+
+            <h2>Feedback</h2>
+
+        <section class="conteudo"> 
+
+            <div class="caixaFeedback">
+                <textarea placeholder="Fale um pouco sobre sua experiência usando nosso aplicativo!" class="textFeedback" ></textarea>
+            </div>
+
+            
+            <div class="btOpcoes">
+
+                <div class="btOpcoesFeedback">
+                    <button onclick="enviarFeedback()" class="btEnviarFeedback">Enviar</button>
+                    <button onclick="" class="btVoltarMeuCrono">Voltar</button>
+                </div>
+                
+            </div>
+
+            <div class="notificacaoFeedBack">
+                <div class="agradecimentoFeedback">
+                    <p>Agradecemos Pelo Feedback!
+                        Nossa Equipe faz uma análise minuciosa de cada comentário para manter o aplicativo funcionando perfeitamente para você!</p>
+                </div>
+                
+                <div class="btVoltarNotifyFeedback">
+                    <button onclick="fecharNotificacao()">Voltar</button>
+                </div>
+            </div>
+
+        </section>
+
+
+        <footer class="rodape"></footer>
+    </div>
+    
+</body>
+</html>
